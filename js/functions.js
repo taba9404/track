@@ -82,12 +82,12 @@ function displayNearbyStations() {
         cardHTML += '<div class="card grey lighten-5">';
         cardHTML += '<div class="card-content">';
         cardHTML += '<span class="card-title">#' + (Number(key) + 1) + ' ' + station.name + '</span>';
-        cardHTML += '<p>ãóó£: ' + getOptimizedDistance(distance) + '</p>';
+        cardHTML += '<p>‚Äπ‚Äî‚Äî¬£: ' + getOptimizedDistance(distance) + '</p>';
         cardHTML += '<ul>';
         cardHTML += '</ul>';
         cardHTML += '</div>';
         cardHTML += '<div class="card-action">';
-        cardHTML += '<a href="https://www.google.com/search?q=' + station.name + 'âw" target="_blank" rel=""noopener"">GoogleÇ≈åüçı</a>';
+        cardHTML += '<a href="https://www.google.com/search?q=' + station.name + '‚Ä∞w" target="_blank" rel=""noopener"">Google‚Äö√Ö≈í≈∏¬ç√µ</a>';
         cardHTML += '</div>';
         cardHTML += '</div>';
 
@@ -97,9 +97,9 @@ function displayNearbyStations() {
 function getOptimizedDistance(distance) {
     const roundedDist = Math.round(distance * 1000) / 1000;
     if (roundedDist < 1) {
-        return "ñÒ" + (roundedDist * 1000) + "m";
+        return "‚Äì√±" + (roundedDist * 1000) + "m";
     } else {
-        return "ñÒ" + roundedDist + "km";
+        return "‚Äì√±" + roundedDist + "km";
     }
 }
 
@@ -112,5 +112,5 @@ function doRequest(method, url) {
 }
 
 (function init() {
-    doRequest("GET", "https://dashimaki929.github.io/data/json/stations.json");
+    doRequest("GET", "https://https://taba9404.github.io/track/data/json/stations.json");
 })();
