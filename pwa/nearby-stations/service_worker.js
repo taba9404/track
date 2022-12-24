@@ -1,8 +1,8 @@
 var CACHE_DYNAMIC_VERSION = 'dynamic-v1';
 var CACHE_NAME = 'pwa-stations-caches';
 var urlsToCache = [
-    '/taba9404.github.io/pwa/nearby-stations/index.html',
-    '/taba9404.github.io/data/json/stations.json',
+    '/taba9404.github.io/track/pwa/nearby-stations/index.html',
+    '/taba9404.github.io/track/data/json/stations.json',
 ];
 
 self.addEventListener('install', function(event) {
