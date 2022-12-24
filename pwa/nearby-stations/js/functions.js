@@ -115,5 +115,5 @@ function doRequest(method, url) {
 
 (function init() {
     doRequest("GET", "
-              https://taba9404.github.io/data/json/stations.json");
+              https://taba9404.github.io/track/data/json/stations.json");
 })();
