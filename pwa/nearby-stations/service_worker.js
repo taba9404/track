@@ -1,8 +1,8 @@
 var CACHE_DYNAMIC_VERSION = 'dynamic-v1';
 var CACHE_NAME = 'pwa-stations-caches';
 var urlsToCache = [
-    '/dashimaki929.github.io/pwa/nearby-stations/index.html',
-    '/dashimaki929.github.io/data/json/stations.json',
+    '/taba9404.github.io/pwa/nearby-stations/index.html',
+    '/taba9404.github.io/data/json/stations.json',
 ];
 
 self.addEventListener('install', function(event) {
@@ -18,18 +18,18 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', event => {
     console.log('[Service Worker] Fetching something ...');
     event.respondWith(
-        // ƒLƒƒƒbƒVƒ…‚Ì‘¶Ýƒ`ƒFƒbƒN
+        // ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã®å­˜åœ¨ãƒã‚§ãƒƒã‚¯
         caches.match(event.request)
             .then(response => {
                 if (response) {
                     return response;
                 } else {
-                    // ƒLƒƒƒbƒVƒ…‚ª‚È‚¯‚ê‚ÎƒŠƒNƒGƒXƒg‚ð“Š‚°‚ÄAƒŒƒXƒ|ƒ“ƒX‚ðƒLƒƒƒbƒVƒ…‚É“ü‚ê‚é
+                    // ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒãªã‘ã‚Œã°ãƒªã‚¯ã‚¨ã‚¹ãƒˆã‚’æŠ•ã’ã¦ã€ãƒ¬ã‚¹ãƒãƒ³ã‚¹ã‚’ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã«å…¥ã‚Œã‚‹
                     return fetch(event.request)
                         .then(res => {
                             return caches.open(CACHE_DYNAMIC_VERSION)
                                 .then(cache => {
-                                    // ÅŒã‚É res ‚ð•Ô‚¹‚é‚æ‚¤‚ÉA‚±‚±‚Å‚Í clone() ‚·‚é•K—v‚ª‚ ‚é
+                                    // æœ€å¾Œã« res ã‚’è¿”ã›ã‚‹ã‚ˆã†ã«ã€ã“ã“ã§ã¯ clone() ã™ã‚‹å¿…è¦ãŒã‚ã‚‹
                                     cache.put(event.request.url, res.clone());
                                     return res;
                                 })
