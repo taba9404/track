@@ -5,7 +5,7 @@
     "background_color": "#009688",
     "display": "standalone",
     "scope": "/",
-    "start_url": "/pwa/nearby-stations/index.html",
+    "start_url": "/track/pwa/nearby-stations/index.html",
     "icons": [{
         "src": "img/icon/apple-touch-icon_192x192.png",
         "sizes": "192x192",
@@ -16,4 +16,3 @@
         "type": "image/png"
       }]
   }
-  
