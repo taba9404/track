@@ -49,10 +49,7 @@ function deriveNearbyStations() {
     stationsArray.sort((a, b) => {
         const aDistance = getDistance(userPosition.latitude, userPosition.longitude, a.lat, a.lon);
         const bDistance = getDistance(userPosition.latitude, userPosition.longitude, b.lat, b.lon);
-        
-        window.alert(aDistance);
-        window.alert(bDistance);
-        
+                
         if (aDistance < bDistance) return -1;
         if (aDistance > bDistance) return 1;
         return 0;
