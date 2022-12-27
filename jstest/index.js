@@ -1,6 +1,7 @@
-function callApi() {
+async function callApi() {
   const res = fetch("https://jsonplaceholder.typicode.com/users");
-  console.log(res)
+  const users = await res.json();
+  console.log(users)
 };
 
 callApi();
