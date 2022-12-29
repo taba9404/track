@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>サーバーにデータを保存する</title>
+<script type="text/javascript" src="xmlhttp.js"></script>
+<script type="text/javascript"><!--
+function dataSave()
+{
+textData = document.ajaxForm.request.value;
+textData = textData.replace(/&/g,"＆");
+httpObj = createXMLHttpRequest(displayData);
+if (httpObj)
+{
+httpObj.open("GET","save.rb?request="+encodeURI(textData),true);
+httpObj.send(null);
+}
+}
+function displayData()
+{
+if ((httpObj.readyState == 4) && (httpObj.status == 200))
+{
+str = httpObj.responseText;
+REbr = new RegExp(String.fromCharCode(10),"g");
+str = str.replace(REbr,"<br>");
+$("result").innerHTML = str;
+}else{
+$("result").innerHTML = "<b>Wait...</b>";
+}
+}
+// --></script>
+</head>
+<body>
+<h1>サーバーにデータを保存する</h1>
+<form method="get" name="ajaxForm" onsubmit="dataSave();return false;">
+<input type="text" name="request" value="テストです"> <input type="submit" value="データを送信"><br>
+</form>
+<div id="result"></div>
+</body>
+</html>
